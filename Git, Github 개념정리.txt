@@ -1,0 +1,44 @@
+Git과 Github 1장
+
+Git = 파일의 수정 기록을 관리하는 도구
+GitHub = 프로젝트 파일과 그 기록을 올려두는 온라인 저장소
+
+*쉽게 생각해서 Git은 로컬에서 사용한 것이고, Github은 인터넷에서 사용한 거
+
+
+[사용법]
+
+[1]Git은 로컬이니, 먼저 깔아준다.
+
+git --version : 깃 버전 확인
+git config --global user.name : Github가 아닌, Git에서 누가 커밋했는지 작성자 정보 확인
+git config --global user.email : 이하동일
+
+
+***[중요점] - 이제 헷갈림. 프로젝트와 파일의 개념.
+
+{1} 기존의 컴퓨터에서 프로젝트가 이미 있다. => 그 폴더에 들어가서, git init
+.git 파일이 만들어짐
+
+*git init의 의미를 파악. => '현재 폴더를 Git 저장소로 만들기'
+
+{2} Github에 저장할 저장소를 만든다 Create Repository
+
+
+
+*케이스 1.
+: Github에서 먼저 저장소를 만들고, 프로젝트에서 clone 하는 경우
+(*이 경우에는 git init과 git remote 연결안해도 된다)
+
+케이스 2.
+: 로컬에서 이미 만들어져있고, 그거를 remote로 연결하는 경우
+(git init 해줘서 내 로컬파일을 Git 저장소로 만들고, remote로 연결하면 됨!!!)
+
+
+*****중요점 3 - 이제 핵심. git pull => 다른 사람이 머지하고 올리고 하는 것들.
+conflict, merge, 깃 브랜치 전략 확인.
+
+
+
+*****실전3 - 복구하는거랑 체리픽 이런 것들도 확인
+
