@@ -1,0 +1,27 @@
+[VM]
+[0] CPU 가상화 설정 확인 (가능 표시)
+
+[1]
+
+- VirtualBox (Windows hosts) 다운로드
+- Ubuntu Desktop (Intel or AMD 64-bit) 다운로드 : Linux 운영체제
+
+
+*질문점 : 왜 리눅스로 주로 개발을 할까. 확인하기
+
+[2]
+
+VirtualBox에서, VM 생성
+- 메모리 8GB
+- 프로세서 4개
+- 디스크 50GB
+- VDI 디스크 형식
+
+VM 설정
+-그래픽컨트롤러 VMSVGA
+-비디오메모리 128MB
+-3D가속 -> 끄기
+-연결방식 NAT
+
+
+*[3] 본격적으로 VM에서 Linux 설치 및 기타 다운로드 시작
