@@ -153,6 +153,13 @@ Having의 의미를 제대로 다시 살펴봐야함.
 *의의: where 절에서 group by 하기 전에 이미, 그룹화와 같은 의미를 가지는 조건을 걸어버렸기 때문이다. 할렐루야 아멘.
 끝난게 아니고,
 [SQL Lesson 12: Order of execution of a Query]에서, 밑의 궁금점 질문들에 대한 것을 찾아야함. 무언가 의의가 있음.
+2번째 문제에서 뇌정지 오는 이유가 (1)Group by 그냥 해버리면, 뭉개지는데랑,
+(2)컬럼끼리 숫자라면 더해서 as나 별칭으로 가로 더하기도 가능하다는 새로운 사실!!! 참 정말 감사합니다.
+위의 두 가지를 이해하면 매우 쉽게 풀린다. 끝.
+
+
+!!!!!(중요.) [아, 추가적으로 집계함수랑 그룹바이를 쓰면, 집계함수는 그룹바이 안에 종속되어서,
+그 그룹안에 있는 것에 대해서만 계산을 진행하게 된다.]
 ---
 *****
 ***[궁금점. 한 개 중요]
@@ -168,8 +175,13 @@ Having의 의미를 제대로 다시 살펴봐야함.
 
 >>> 오류 날거같은데 오류 아니면 이상한 데이터가 나타날것같은데. 맞나? <<< 직관적으로 이 생각이, 핵심이다.
 *****
+[SQL Bolt - sql 마지막]
 
+SELECT director, (domestic_sales+international_sales) FROM movies inner join boxoffice on id = movie_id group by director;
 
+이거랑
+
+SELECT director, sum(domestic_sales+international_sales) FROM movies inner join boxoffice on id = movie_id group by director;의 차이.
 
 
 
